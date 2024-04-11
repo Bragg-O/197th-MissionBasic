@@ -9,59 +9,11 @@
 /* ============================================================================ */
 /* vvvvvvvvvvvvvvvvvvvvvvvvvvvv You can edit here vvvvvvvvvvvvvvvvvvvvvvvvvvvvv */
 /* ============================================================================ */
-author			= "197th Compagnie Chimaera"; //Mission Author 
 onLoadName		= "Acclamator l'Orion"; //Mission Name 
 onLoadMission	= "197th Compagnie Chimaera - Acclamator l'Orion"; //Mission Short Description
-
+respawnDelay 	= 20; //Respawn Delay (s)
 
 /* ============================================================================ */
 /* vvvvvvvvvvvvvvvvvvvvvvvvvvvvvvv Do not touch vvvvvvvvvvvvvvvvvvvvvvvvvvvvvvv */
 /* ============================================================================ */
-loadScreen = "\197th_Script\Data\loadscreen.paa"; //LoadScreen
-class Header {
-	gameType =  Zeus;	// Game type
-	minPlayers =  1;	// minimum number of players the mission supports
-	maxPlayers = 32;	// maximum number of players the mission supports
-};
-respawn = 3; //Respawn type
-respawnTemplatesWest[] = { "MenuPosition" };
-respawnTemplatesEast[] = { "MenuPosition"};
-respawnTemplatesGuer[] = { "MenuPosition"};
-respawnTemplatesCiv[] = { "MenuPosition" };
-respawnTemplatesVirtual[] = {}; // Virtual players, used mainly in Curator (Zeus) missions
-respawnDelay = 20; //Respawn Delay (s)
-respawnOnStart = 0; //Respawn on start
-enableDebugConsole[] = {"76561198113173701", "76561198169985342", "76561198203156987"}; // admins and players with their UID in this list have access
-enableItemsDropping = 1; // 0: disabled - 1: enabled. Default: ?
-enableTeamSwitch = 0; // 0: disabled - 1: enabled. Default: 1
-aiKills = 0; // 0: disabled - 1: enabled. Default: 0
-briefing = 0; // 0: disabled - 1: enabled. Default: 1
-disabledAI = 1; // 0: disabled - 1: enabled. Default: 0
-joinUnassigned = 1; // 0: disabled - 1: enabled. Default: 1
-showCompass = 1; // 0: disabled - 1: enabled. Default: 1
-showGPS = 1; // 0: disabled - 1: enabled. Default: 1
-showGroupIndicator = 0; // 0: disabled - 1: enabled. Default: 0
-showMap = 1; // 0: disabled - 1: enabled. Default: 1
-showSquadRadar = 0; // 0: disabled - 1: enabled. Default: 0
-showUAVFeed = 1; // 0: disabled - 1: enabled. Default: 1
-allowProfileGlasses = 0; // 0: disabled - 1: enabled. Default: 1 
-corpseLimit = 15; // Default: 15
-corpseRemovalMinTime = 60; // seconds. Default: 10
-corpseRemovalMaxTime = 120; // seconds. Default: 3600
-wreckLimit = 5; // seconds. Default: 15
-wreckRemovalMinTime = 360; // seconds. Default: 10
-wreckRemovalMaxTime = 500; // seconds. Default: 36000 (10 hours)
-minPlayerDistance = 0; // meters. Default: 0
-saving = 0; // 0: disabled - 1: enabled. Default: 1
-allowFunctionsLog = 1; // 0: disabled - 1: enabled. Default: ?
-allowFunctionsRecompile = 1; // 0: disabled - 1: enabled. Default: 0
-zeusCompositionScriptLevel = 2;	// 0: all scripts are forbidden
-								// 1: only attributes are allowed (including custom attributes added by mods)
-								// 2: all scripts are allowed including init scripts
-								// Default: 1
-
-//Arsenal override
-#include "\197th_Script\Exec\LARs\override_VA_templates\settings.hpp"
-class CfgFunctions {
-	#include "\197th_Script\Exec\LARs\override_VA_templates\functions\functions.hpp"
-};
+#include "\197th_Core\197th_Core.hpp"
