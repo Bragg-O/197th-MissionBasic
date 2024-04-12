@@ -13,7 +13,6 @@ author			= "197th Compagnie Chimaera"; //Mission Author
 onLoadName		= "Acclamator l'Orion"; //Mission Name 
 onLoadMission	= "197th Compagnie Chimaera - Acclamator l'Orion"; //Mission Short Description
 
-
 /* ============================================================================ */
 /* vvvvvvvvvvvvvvvvvvvvvvvvvvvvvvv Do not touch vvvvvvvvvvvvvvvvvvvvvvvvvvvvvvv */
 /* ============================================================================ */
@@ -59,6 +58,18 @@ zeusCompositionScriptLevel = 2;	// 0: all scripts are forbidden
 								// 1: only attributes are allowed (including custom attributes added by mods)
 								// 2: all scripts are allowed including init scripts
 								// Default: 1
+
+class CfgWorlds
+{
+	class Any // or specific world name
+	{
+		author = "197th Development Team";
+		description = "197th Compagnie Chimaera";
+		pictureMap = "\197th_Script\Data\LoadMap.jpg";
+		pictureShot = "\197th_Script\Data\loadscreen.paa";
+		loadingTexts[] = { "197th Compagnie Chimaera", "La Compagnie Chimaera vous accueille en son sein", "Préparez vous pour une expérience RolePlay unique et immersive" };
+	};
+};
 
 //Arsenal override
 #include "\197th_Script\Exec\LARs\override_VA_templates\settings.hpp"
