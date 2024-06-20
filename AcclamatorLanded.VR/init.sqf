@@ -24,7 +24,9 @@ _DoNotDisplayForCurators = [ // Make all players' curators editable for all obje
 		LoadUnits_10, 
 		LoadUnits_11
 	];
-	
+
+// Initialize the ArsenalBlocker.
+[] spawn CIM_fnc_initBlockArsenal;
 /*
 	Put your initialization scripts here.
 */
